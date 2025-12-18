@@ -44,15 +44,29 @@ const HeroSection = () => {
               Con prólogo de José Manuel Calderón, exjugador de los New York Knicks y campeón del mundo de baloncesto.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 animate-fade-up delay-400">
-              <Button 
-                variant="hero" 
-                size="lg"
-                onClick={() => document.getElementById('comprar')?.scrollIntoView({ behavior: 'smooth' })}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-4 animate-fade-up delay-400">
+              <a
+                href="https://www.amazon.es/GU%C3%8DA-NUEVA-YORK-Rafa-Vega/dp/8419999482?pd_rd_w=VWufb&content-id=amzn1.sym.9f9111e3-7075-4ebb-9378-2ea5f442db43%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=9f9111e3-7075-4ebb-9378-2ea5f442db43&pf_rd_r=NNW8T0C2XT1J7FHC3486&pd_rd_wg=Ba7eP&pd_rd_r=7f119761-b578-4c21-ab6f-e82fcf997a40&pd_rd_i=8419999482&linkCode=ll1&tag=mfddv-21&linkId=99956471599accaa043f038050d9eb25&language=es_ES&ref_=as_li_ss_tl"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Comprar ahora
-              </Button>
+                <Button variant="hero" size="lg">
+                  <ShoppingCart className="w-5 h-5 mr-2" />
+                  Ver en Amazon
+                </Button>
+              </a>
+              <a
+                href="https://www.gigantes.com/tienda/libros-baloncesto/guia-de-nueva-york/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="hero" size="lg">
+                  <ShoppingCart className="w-5 h-5 mr-2" />
+                  Ver en Gigantes
+                </Button>
+              </a>
+            </div>
+            <div className="flex justify-center lg:justify-start animate-fade-up delay-500">
               <Button 
                 variant="heroOutline" 
                 size="lg"
