@@ -66,16 +66,6 @@ const HeroSection = () => {
                 </Button>
               </a>
             </div>
-            <div className="flex justify-center lg:justify-start animate-fade-up delay-500">
-              <Button 
-                variant="heroOutline" 
-                size="lg"
-                onClick={() => document.getElementById('sobre-el-libro')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                Saber más
-              </Button>
-            </div>
           </div>
         </div>
       </div>
