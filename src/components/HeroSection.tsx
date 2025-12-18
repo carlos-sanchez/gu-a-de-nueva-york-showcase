@@ -19,7 +19,7 @@ const HeroSection = () => {
               <img
                 src={bookCover}
                 alt="Portada del libro Guía de Nueva York por Rafa Vega y Carlos Sánchez"
-                className="relative w-64 md:w-80 lg:w-96 book-shadow rounded-lg transform hover:scale-105 transition-transform duration-500 animate-float"
+                className="relative w-64 md:w-80 lg:w-96 book-shadow rounded-lg transform hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
