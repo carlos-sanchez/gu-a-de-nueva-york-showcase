@@ -1,0 +1,75 @@
+import bookCover from "@/assets/book-cover.jpg";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart, BookOpen } from "lucide-react";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-sage">
+      {/* Subtle overlay pattern */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }} />
+      
+      <div className="container relative z-10 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Book Cover */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2 animate-fade-up">
+            <div className="relative">
+              <div className="absolute -inset-4 gradient-sage opacity-30 blur-3xl rounded-3xl" />
+              <img
+                src={bookCover}
+                alt="Portada del libro Guía de Nueva York por Rafa Vega y Carlos Sánchez"
+                className="relative w-64 md:w-80 lg:w-96 book-shadow rounded-lg transform hover:scale-105 transition-transform duration-500 animate-float"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="text-center lg:text-left order-2 lg:order-1 space-y-6">
+            <p className="text-primary-foreground/80 font-body text-sm uppercase tracking-[0.2em] animate-fade-up">
+              Por Rafa Vega y Carlos Sánchez
+            </p>
+            
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight animate-fade-up delay-100">
+              Guía de
+              <br />
+              <span className="italic">Nueva York</span>
+            </h1>
+            
+            <p className="font-display text-xl md:text-2xl text-primary-foreground/90 italic animate-fade-up delay-200">
+              Experiencias para vivir la ciudad como un neoyorquino
+            </p>
+            
+            <p className="text-primary-foreground/80 font-body text-base md:text-lg max-w-lg mx-auto lg:mx-0 animate-fade-up delay-300">
+              Con prólogo de José Manuel Calderón, exjugador de los New York Knicks y campeón del mundo de baloncesto.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 animate-fade-up delay-400">
+              <Button 
+                variant="hero" 
+                size="lg"
+                onClick={() => document.getElementById('comprar')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <ShoppingCart className="w-5 h-5 mr-2" />
+                Comprar ahora
+              </Button>
+              <Button 
+                variant="heroOutline" 
+                size="lg"
+                onClick={() => document.getElementById('sobre-el-libro')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Saber más
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+    </section>
+  );
+};
+
+export default HeroSection;
