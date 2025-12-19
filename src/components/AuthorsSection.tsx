@@ -1,10 +1,11 @@
 import carlosSanchezImage from "@/assets/carlos-sanchez.jpg";
+import rafaVegaImage from "@/assets/rafa-vega.jpg";
 
 const authors = [
   {
     name: "Rafa Vega",
     role: "Textos",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    image: rafaVegaImage,
     bio: `Doctor en Periodismo con un máster en Innovación Periodística y otro en Gestión de Empresas Audiovisuales. Ha trabajado veinte años en televisión y da clase en la universidad. Nueva York le fascina: la ha visitado veinte veces y la conoce muy bien porque ha pasado largas temporadas viviendo allí. Además, es fijo en su Maratón, en el que ha participado una docena de ediciones. Ha publicado siete libros, este es su octavo.`,
   },
   {
