@@ -11,7 +11,7 @@ const authors = [
     name: "Carlos Sánchez",
     role: "Fotografía",
     image: carlosSanchezImage,
-    bio: `Detrás del objetivo de las imágenes de esta guía, es diseñador de productos digitales y fotógrafo. Ha vivido en Nueva York y ha recorrido cada rincón de la ciudad con su cámara. En su cuenta de Twitter, @chocotuits, fusiona el diseño y la fotografía para mostrar la vida en la Gran Manzana. Su primer libro «Nueva York: una guía fotográfica» (Libros.com, 2021) ha sido calificado por National Geographic como «la guía definitiva para fotografiar Nueva York».`,
+    bio: `Detrás del objetivo de las imágenes de esta guía, es diseñador de productos digitales y fotógrafo. Ha vivido en Nueva York y ha recorrido cada rincón de la ciudad con su cámara. En su cuenta de X, <a href="https://x.com/chocotuits/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">@chocotuits</a>, fusiona el diseño y la fotografía para mostrar la vida en la Gran Manzana. Su primer libro «Nueva York: una guía fotográfica» (Libros.com, 2021) ha sido calificado por National Geographic como «la guía definitiva para fotografiar Nueva York».`,
   },
 ];
 
@@ -45,9 +45,10 @@ const AuthorsSection = () => {
                   <h3 className="font-display text-2xl text-foreground">{author.name}</h3>
                   <p className="text-primary font-body font-medium">{author.role}</p>
                 </div>
-                <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                  {author.bio}
-                </p>
+                <p 
+                  className="text-muted-foreground font-body text-sm leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: author.bio }}
+                />
               </div>
             </div>
           ))}
