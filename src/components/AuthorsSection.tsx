@@ -1,3 +1,5 @@
+import carlosSanchezImage from "@/assets/carlos-sanchez.jpg";
+
 const authors = [
   {
     name: "Rafa Vega",
@@ -8,7 +10,7 @@ const authors = [
   {
     name: "Carlos Sánchez",
     role: "Fotografía",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: carlosSanchezImage,
     bio: `Detrás del objetivo de las imágenes de esta guía, es diseñador de productos digitales y fotógrafo. Ha vivido en Nueva York y ha recorrido cada rincón de la ciudad con su cámara. En su cuenta de Twitter, @chocotuits, fusiona el diseño y la fotografía para mostrar la vida en la Gran Manzana. Su primer libro «Nueva York: una guía fotográfica» (Libros.com, 2021) ha sido calificado por National Geographic como «la guía definitiva para fotografiar Nueva York».`,
   },
 ];
