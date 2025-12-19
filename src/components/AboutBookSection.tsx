@@ -1,3 +1,5 @@
+import joseManuelCalderonImage from "@/assets/jose-manuel-calderon.jpg";
+
 const AboutBookSection = () => {
   return (
     <section id="sobre-el-libro" className="py-20 md:py-32 bg-background">
@@ -32,9 +34,11 @@ const AboutBookSection = () => {
               del año. Disfruta de esta guía y sigue conociendo una ciudad para todos los gustos.
             </p>
             <footer className="mt-6 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full gradient-sage flex items-center justify-center text-primary-foreground font-bold text-lg">
-                JC
-              </div>
+              <img
+                src={joseManuelCalderonImage}
+                alt="José Manuel Calderón"
+                className="w-12 h-12 rounded-full object-cover"
+              />
               <div>
                 <cite className="font-body font-semibold text-foreground not-italic">
                   José Manuel Calderón
