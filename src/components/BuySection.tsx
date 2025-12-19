@@ -43,7 +43,10 @@ const BuySection = () => {
               <img
                 src={bookCover}
                 alt="Portada del libro Guía de Nueva York"
-                className="relative w-56 md:w-72 book-shadow rounded-lg"
+                className="relative w-56 md:w-72"
+                style={{
+                  boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.4), 2px 2px 8px rgba(0, 0, 0, 0.3), inset -1px 0 1px rgba(0, 0, 0, 0.1)'
+                }}
               />
             </div>
           </div>
