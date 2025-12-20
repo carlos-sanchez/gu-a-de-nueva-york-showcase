@@ -76,14 +76,14 @@ const BuySection = () => {
                     </div>
                     <div className="flex-1 text-left">
                       <div className="flex items-center gap-2">
-                        <span className="font-display text-lg text-primary-foreground">
+                        <span className="font-display text-lg font-semibold text-primary-foreground">
                           {option.title}
                         </span>
-                        <span className="text-xs bg-white/20 text-primary-foreground px-2 py-0.5 rounded-full">
+                        <span className="text-xs font-medium bg-white/30 text-primary-foreground px-2 py-0.5 rounded-full">
                           {option.type}
                         </span>
                       </div>
-                      <p className="text-sm text-primary-foreground/70">
+                      <p className="text-sm font-medium text-primary-foreground/90">
                         {option.description}
                       </p>
                     </div>
