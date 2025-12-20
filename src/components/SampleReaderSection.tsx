@@ -1,10 +1,30 @@
 import { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
 import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+
+// Set up the worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const SampleReaderSection = () => {
+  const [numPages, setNumPages] = useState<number>(0);
+  const [pageNumber, setPageNumber] = useState<number>(1);
   const [scale, setScale] = useState(1);
   const pdfUrl = "/sample/Guia_NY_sample.pdf";
+
+  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    setNumPages(numPages);
+  };
+
+  const goToPrevPage = () => {
+    setPageNumber((prev) => Math.max(prev - 1, 1));
+  };
+
+  const goToNextPage = () => {
+    setPageNumber((prev) => Math.min(prev + 1, numPages));
+  };
 
   const handleZoomIn = () => {
     setScale((prev) => Math.min(prev + 0.25, 2));
@@ -35,9 +55,29 @@ const SampleReaderSection = () => {
           {/* PDF Viewer Controls */}
           <div className="flex items-center justify-between bg-card rounded-t-2xl border border-border border-b-0 px-4 py-3">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-muted-foreground">
-                Muestra gratuita · 3 capítulos
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={goToPrevPage}
+                disabled={pageNumber <= 1}
+                className="h-8 w-8"
+                aria-label="Página anterior"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <span className="text-sm font-medium text-muted-foreground min-w-[5rem] text-center">
+                {pageNumber} / {numPages}
               </span>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={goToNextPage}
+                disabled={pageNumber >= numPages}
+                className="h-8 w-8"
+                aria-label="Página siguiente"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
             </div>
             
             <div className="flex items-center gap-2">
@@ -45,6 +85,7 @@ const SampleReaderSection = () => {
                 variant="ghost"
                 size="icon"
                 onClick={handleZoomOut}
+                disabled={scale <= 0.5}
                 className="h-8 w-8"
                 aria-label="Reducir zoom"
               >
@@ -57,6 +98,7 @@ const SampleReaderSection = () => {
                 variant="ghost"
                 size="icon"
                 onClick={handleZoomIn}
+                disabled={scale >= 2}
                 className="h-8 w-8"
                 aria-label="Aumentar zoom"
               >
@@ -75,22 +117,38 @@ const SampleReaderSection = () => {
             </div>
           </div>
 
-          {/* PDF Embed */}
+          {/* PDF Viewer */}
           <div 
-            className="bg-card rounded-b-2xl border border-border overflow-hidden shadow-lg"
+            className="bg-card rounded-b-2xl border border-border overflow-auto shadow-lg flex justify-center"
             style={{ height: "70vh", minHeight: "500px" }}
           >
-            <iframe
-              src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1`}
-              className="w-full h-full"
-              style={{ 
-                transform: `scale(${scale})`,
-                transformOrigin: "top center",
-                width: `${100 / scale}%`,
-                height: `${100 / scale}%`,
-              }}
-              title="Muestra de la Guía de Nueva York"
-            />
+            <Document
+              file={pdfUrl}
+              onLoadSuccess={onDocumentLoadSuccess}
+              loading={
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-muted-foreground">Cargando PDF...</p>
+                </div>
+              }
+              error={
+                <div className="flex items-center justify-center h-full p-8 text-center">
+                  <p className="text-muted-foreground">
+                    No se pudo cargar el PDF.{" "}
+                    <a href={pdfUrl} className="text-primary underline" target="_blank" rel="noopener noreferrer">
+                      Descárgalo aquí
+                    </a>
+                  </p>
+                </div>
+              }
+            >
+              <Page 
+                pageNumber={pageNumber} 
+                scale={scale}
+                className="mx-auto"
+                renderTextLayer={true}
+                renderAnnotationLayer={true}
+              />
+            </Document>
           </div>
 
           {/* CTA below the viewer */}
