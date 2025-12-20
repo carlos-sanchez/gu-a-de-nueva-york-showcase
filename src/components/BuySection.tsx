@@ -79,11 +79,11 @@ const BuySection = () => {
                         <span className="font-display text-lg font-semibold text-primary-foreground">
                           {option.title}
                         </span>
-                        <span className="text-xs font-medium bg-white/30 text-primary-foreground px-2 py-0.5 rounded-full">
+                        <span className="text-xs font-medium bg-white/15 text-primary-foreground px-2 py-0.5 rounded-full">
                           {option.type}
                         </span>
                       </div>
-                      <p className="text-sm font-medium text-primary-foreground/90">
+                      <p className="text-sm font-medium text-primary-foreground">
                         {option.description}
                       </p>
                     </div>
