@@ -2,15 +2,15 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Una joya imprescindible para cualquier amante de Nueva York. Los itinerarios son perfectos y las fotografías espectaculares.",
-    author: "María González",
-    role: "Viajera frecuente",
+    text: "El libro, lleno de espectaculares fotografías, es un buen viaje a Nueva York y te ayuda a conocer la ciudad y sus zonas más interesantes.",
+    author: "Francisco Tazón",
+    role: "Autor de Guía turística de Nueva York",
     rating: 5,
   },
   {
-    text: "Por fin una guía diferente que te muestra la ciudad como la viven los neoyorquinos. Ya he usado varias de sus recomendaciones.",
-    author: "Carlos Rodríguez",
-    role: "Fotógrafo aficionado",
+    text: "El libro está muy bien, porque se centra en vivir la ciudad como un local. Me gusta que esté organizado por días. Además las fotos son fantásticas.",
+    author: "Valentina",
+    role: "Lectora",
     rating: 5,
   },
   {
