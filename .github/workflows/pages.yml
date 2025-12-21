@@ -35,7 +35,7 @@ jobs:
 
       # IMPORTANT: replace with your real domain
       - name: Add CNAME
-        run: echo "yourdomain.com" > dist/CNAME
+        run: echo "guiany.com" > dist/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
