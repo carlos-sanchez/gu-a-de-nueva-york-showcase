@@ -1,12 +1,9 @@
-import { BookOpen, Calendar, FileText, Hash, Ruler } from "lucide-react";
+import { BookOpen, FileText, Ruler } from "lucide-react";
 
 const details = [
   { icon: Ruler, label: "Formato", value: "17 × 24 cm" },
   { icon: BookOpen, label: "Encuadernación", value: "Tapa blanda" },
   { icon: FileText, label: "Páginas", value: "184" },
-  { icon: Hash, label: "ISBN", value: "978-84-19955-61-1" },
-  { icon: Hash, label: "ISBN digital", value: "978-84-19955-62-8" },
-  { icon: Calendar, label: "Fecha de lanzamiento", value: "19 de febrero de 2024" },
 ];
 
 const BookDetailsSection = () => {
