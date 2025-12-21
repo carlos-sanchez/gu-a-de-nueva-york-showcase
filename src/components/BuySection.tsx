@@ -12,7 +12,7 @@ const buyOptions = [
   },
   {
     title: "Gigantes.com",
-    description: "La tienda de la mítica revista de basket",
+    description: "Versión física con envío a toda España",
     type: "Físico",
     icon: ShoppingBag,
     url: "https://www.gigantes.com/tienda/libros-baloncesto/guia-de-nueva-york/",
