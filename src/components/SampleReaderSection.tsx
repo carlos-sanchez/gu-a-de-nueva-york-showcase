@@ -119,8 +119,8 @@ const SampleReaderSection = () => {
 
           {/* PDF Viewer */}
           <div 
-            className="bg-card rounded-b-2xl border border-border overflow-auto shadow-lg flex justify-center"
-            style={{ height: "70vh", minHeight: "500px" }}
+            className="bg-card rounded-b-2xl border border-border overflow-hidden shadow-lg flex justify-center items-center"
+            style={{ aspectRatio: "2028 / 2831" }}
           >
             <Document
               file={pdfUrl}
@@ -147,6 +147,7 @@ const SampleReaderSection = () => {
                 className="mx-auto"
                 renderTextLayer={true}
                 renderAnnotationLayer={true}
+                width={800}
               />
             </Document>
           </div>
