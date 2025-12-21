@@ -1,4 +1,11 @@
+import { Instagram } from "lucide-react";
 import joseManuelCalderonImage from "@/assets/jose-manuel-calderon.jpg";
+
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const AboutBookSection = () => {
   return (
@@ -39,13 +46,33 @@ const AboutBookSection = () => {
                 alt="José Manuel Calderón"
                 className="w-12 h-12 rounded-full object-cover"
               />
-              <div>
+              <div className="flex-1">
                 <cite className="font-body font-semibold text-foreground not-italic">
                   José Manuel Calderón
                 </cite>
                 <p className="text-sm text-muted-foreground">
                   Exjugador de los New York Knicks · Campeón del mundo
                 </p>
+              </div>
+              <div className="flex gap-3">
+                <a 
+                  href="https://x.com/JmCalderon" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="José Manuel Calderón en X"
+                >
+                  <XIcon className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/jmcalderon8/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="José Manuel Calderón en Instagram"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
               </div>
             </footer>
           </blockquote>
