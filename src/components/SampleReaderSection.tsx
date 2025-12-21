@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,22 @@ const SampleReaderSection = () => {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [scale, setScale] = useState(1);
+  const [containerWidth, setContainerWidth] = useState<number>(800);
+  const containerRef = useRef<HTMLDivElement>(null);
   const pdfUrl = "/sample/Guia_NY_sample.pdf";
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        // Subtract padding/border (2px border on each side)
+        setContainerWidth(containerRef.current.clientWidth - 4);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
@@ -119,19 +134,19 @@ const SampleReaderSection = () => {
 
           {/* PDF Viewer */}
           <div 
+            ref={containerRef}
             className="bg-card rounded-b-2xl border border-border overflow-hidden shadow-lg flex justify-center items-center"
-            style={{ aspectRatio: "2028 / 2831" }}
           >
             <Document
               file={pdfUrl}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={
-                <div className="flex items-center justify-center h-full">
+                <div className="flex items-center justify-center h-64">
                   <p className="text-muted-foreground">Cargando PDF...</p>
                 </div>
               }
               error={
-                <div className="flex items-center justify-center h-full p-8 text-center">
+                <div className="flex items-center justify-center h-64 p-8 text-center">
                   <p className="text-muted-foreground">
                     No se pudo cargar el PDF.{" "}
                     <a href={pdfUrl} className="text-primary underline" target="_blank" rel="noopener noreferrer">
@@ -147,7 +162,7 @@ const SampleReaderSection = () => {
                 className="mx-auto"
                 renderTextLayer={true}
                 renderAnnotationLayer={true}
-                width={800}
+                width={containerWidth}
               />
             </Document>
           </div>
