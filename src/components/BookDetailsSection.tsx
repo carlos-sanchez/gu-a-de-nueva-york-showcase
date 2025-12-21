@@ -1,7 +1,7 @@
 import { BookOpen, FileText, Ruler } from "lucide-react";
 
 const details = [
-  { icon: Ruler, label: "Formato", value: "17 × 24 cm" },
+  { icon: Ruler, label: "Dimensiones", value: "17 × 24 cm" },
   { icon: BookOpen, label: "Encuadernación", value: "Tapa blanda" },
   { icon: FileText, label: "Páginas", value: "184" },
 ];
