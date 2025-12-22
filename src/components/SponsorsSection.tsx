@@ -3,13 +3,13 @@ import heymondoLogo from "@/assets/logo-heymondo.svg";
 
 const SponsorsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="py-20 md:py-32 bg-muted/50">
       <div className="container">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="font-display text-3xl md:text-4xl text-foreground">
-            Mecenas y Patrocinadores
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
+            Mecenas y <span className="italic text-primary">Patrocinadores</span>
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
             Esta guía se ha editado gracias al apoyo de 176 mecenas y dos patrocinadores durante la campaña de crowdfunding
           </p>
         </div>
@@ -24,7 +24,7 @@ const SponsorsSection = () => {
             <img
               src={dailybotLogo}
               alt="DailyBot"
-              className="h-12 md:h-16 w-auto"
+              className="h-12 md:h-14 w-auto"
             />
           </a>
           <a
@@ -36,7 +36,7 @@ const SponsorsSection = () => {
             <img
               src={heymondoLogo}
               alt="Heymondo"
-              className="h-10 md:h-14 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
           </a>
         </div>
