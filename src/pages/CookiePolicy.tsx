@@ -17,7 +17,7 @@ const CookiePolicy = () => {
           <h1 className="font-display text-4xl md:text-5xl text-foreground mb-8">
             Política de Cookies
           </h1>
-          
+
           <p className="text-muted-foreground text-lg mb-8">
             Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
@@ -25,15 +25,15 @@ const CookiePolicy = () => {
           <section className="mb-10">
             <h2 className="font-display text-2xl text-foreground mb-4">¿Qué son las cookies?</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo 
-              cuando los visitas. Se utilizan para hacer que los sitios web funcionen de manera más 
+              Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo
+              cuando los visitas. Se utilizan para hacer que los sitios web funcionen de manera más
               eficiente, así como para proporcionar información a los propietarios del sitio.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="font-display text-2xl text-foreground mb-4">Cookies que utilizamos</h2>
-            
+
             <div className="space-y-6">
               <div className="bg-muted/50 rounded-lg p-6">
                 <h3 className="font-display text-xl text-foreground mb-2">Cookies técnicas y funcionales</h3>
@@ -110,29 +110,37 @@ const CookiePolicy = () => {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-foreground/80">
               <li>
-                <strong>Google Fonts:</strong> Para cargar tipografías personalizadas. Google puede recopilar 
+                <strong>Google Fonts:</strong> Para cargar tipografías personalizadas. Google puede recopilar
                 información técnica como tu dirección IP.{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Política de privacidad de Google
                 </a>
               </li>
               <li>
-                <strong>Amazon:</strong> Al hacer clic en enlaces de compra de Amazon, serás redirigido a su 
+                <strong>Amazon:</strong> Al hacer clic en enlaces de compra de Amazon, serás redirigido a su
                 sitio web donde se aplicará su política de cookies. Utilizamos el programa de afiliados de Amazon.{" "}
                 <a href="https://www.amazon.es/gp/help/customer/display.html?nodeId=201909010" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Política de cookies de Amazon
                 </a>
               </li>
               <li>
-                <strong>Payhip:</strong> Plataforma de venta digital. Al realizar una compra, se aplicará su 
+                <strong>Payhip:</strong> Plataforma de venta digital. Al realizar una compra, se aplicará su
                 política de privacidad.{" "}
                 <a href="https://payhip.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Política de privacidad de Payhip
                 </a>
               </li>
               <li>
-                <strong>Gigantes.com:</strong> Tienda de baloncesto. Al visitar su sitio, se aplicará su 
-                propia política de cookies.
+                <strong>Gigantes.com:</strong> Al hacer clic en enlaces de compra de Amazon, serás redirigido a su
+                sitio web donde se aplicará su política de cookies.
+              </li>
+              <li>
+                <strong>Dailybot.com:</strong> Al hacer clic en enlaces del patrocinador Dailybot, serás redirigido a su
+                sitio web donde se aplicará su política de cookies.
+              </li>
+              <li>
+                <strong>Heymondo.com:</strong> Al hacer clic en enlaces del patrocinador Heymondo, serás redirigido a su
+                sitio web donde se aplicará su política de cookies. Utilizamos el programa de afiliados de Heymondo.
               </li>
             </ul>
           </section>
@@ -140,7 +148,7 @@ const CookiePolicy = () => {
           <section className="mb-10">
             <h2 className="font-display text-2xl text-foreground mb-4">Cómo gestionar las cookies</h2>
             <p className="text-foreground/80 leading-relaxed mb-4">
-              Puedes gestionar tus preferencias de cookies en cualquier momento. Además, la mayoría de 
+              Puedes gestionar tus preferencias de cookies en cualquier momento. Además, la mayoría de
               navegadores te permiten:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-foreground/80">
@@ -151,7 +159,7 @@ const CookiePolicy = () => {
               <li>Eliminar todas las cookies cuando cierres el navegador</li>
             </ul>
             <p className="text-foreground/80 leading-relaxed mt-4">
-              Ten en cuenta que si decides bloquear las cookies, es posible que algunas funcionalidades 
+              Ten en cuenta que si decides bloquear las cookies, es posible que algunas funcionalidades
               del sitio web no funcionen correctamente.
             </p>
           </section>
@@ -159,8 +167,8 @@ const CookiePolicy = () => {
           <section className="mb-10">
             <h2 className="font-display text-2xl text-foreground mb-4">Contacto</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Si tienes alguna pregunta sobre nuestra política de cookies, puedes contactarnos a través 
-              del formulario de contacto en nuestra página principal.
+              Si tienes alguna pregunta sobre nuestra política de cookies, puedes contactarnos a través
+              de hi@carlossanchez.me
             </p>
           </section>
         </article>
