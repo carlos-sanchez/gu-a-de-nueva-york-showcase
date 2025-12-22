@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import AboutBookSection from "@/components/AboutBookSection";
 import SampleReaderSection from "@/components/SampleReaderSection";
@@ -9,18 +10,29 @@ import SponsorsSection from "@/components/SponsorsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    // Update document title for SPA navigation
+    document.title = "Guía de Nueva York - Experiencias para vivir la ciudad como un neoyorquino";
+  }, []);
+
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <AboutBookSection />
-      <SampleReaderSection />
-      <TestimonialsSection />
-      <AuthorsSection />
-      <BookDetailsSection />
-      <BuySection />
-      <SponsorsSection />
+    <>
+      <main className="min-h-screen">
+        <HeroSection />
+        <article>
+          <AboutBookSection />
+        </article>
+        <SampleReaderSection />
+        <aside aria-label="Opiniones de lectores">
+          <TestimonialsSection />
+        </aside>
+        <AuthorsSection />
+        <BookDetailsSection />
+        <BuySection />
+        <SponsorsSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

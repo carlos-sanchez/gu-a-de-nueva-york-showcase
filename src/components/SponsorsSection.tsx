@@ -3,10 +3,10 @@ import heymondoLogo from "@/assets/logo-heymondo.svg";
 
 const SponsorsSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted/50">
+    <section className="py-20 md:py-32 bg-muted/50" aria-labelledby="sponsors-heading">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
+          <h2 id="sponsors-heading" className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
             Mecenas y <span className="italic text-primary">Patrocinadores</span>
           </h2>
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
@@ -14,17 +14,19 @@ const SponsorsSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-12 md:gap-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-12 md:gap-16" role="list" aria-label="Patrocinadores">
           <a
             href="https://www.dailybot.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-opacity hover:opacity-80"
+            aria-label="DailyBot - Patrocinador de la Guía de Nueva York"
           >
             <img
               src={dailybotLogo}
-              alt="DailyBot"
+              alt="Logo de DailyBot"
               className="h-12 md:h-14 w-auto"
+              loading="lazy"
             />
           </a>
           <a
@@ -32,11 +34,13 @@ const SponsorsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="transition-opacity hover:opacity-80"
+            aria-label="Heymondo - Patrocinador de la Guía de Nueva York"
           >
             <img
               src={heymondoLogo}
-              alt="Heymondo"
+              alt="Logo de Heymondo"
               className="h-8 md:h-10 w-auto"
+              loading="lazy"
             />
           </a>
         </div>
