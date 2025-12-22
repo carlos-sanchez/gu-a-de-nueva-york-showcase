@@ -36,7 +36,7 @@ const HeroSection = () => {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight animate-fade-up delay-100">
               Guía de
               <br />
-              <span className="italic">Nueva York</span>
+              <span className="italic font-normal">Nueva York</span>
             </h1>
             
             <p className="font-display text-xl md:text-2xl text-primary-foreground/90 italic animate-fade-up delay-200">
