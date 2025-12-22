@@ -5,6 +5,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import AuthorsSection from "@/components/AuthorsSection";
 import BookDetailsSection from "@/components/BookDetailsSection";
 import BuySection from "@/components/BuySection";
+import SponsorsSection from "@/components/SponsorsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <AuthorsSection />
       <BookDetailsSection />
       <BuySection />
+      <SponsorsSection />
       <Footer />
     </main>
   );
