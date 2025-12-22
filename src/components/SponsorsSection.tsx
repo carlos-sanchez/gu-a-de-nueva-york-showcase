@@ -59,9 +59,9 @@ const SponsorsSection = () => {
           </a>
         </div>
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" style="margin-top: 80px;">
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            <br /><br /><br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+            Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
           </p>
         </div>
 
