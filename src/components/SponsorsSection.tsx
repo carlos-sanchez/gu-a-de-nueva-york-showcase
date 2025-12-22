@@ -7,7 +7,7 @@ const SponsorsSection = () => {
       <div className="container">
         <div className="text-center mb-16">
           <h2 id="sponsors-heading" className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
-            Agradecimientos</span>
+            Agradecimientos
           </h2>
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
             Esta guía se ha editado gracias al apoyo de 176 mecenas y durante la campaña de crowdfunding y al patrocinio de
