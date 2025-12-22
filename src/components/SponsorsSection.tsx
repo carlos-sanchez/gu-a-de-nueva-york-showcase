@@ -24,7 +24,10 @@ const SponsorsSection = () => {
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
               aria-label="Heymondo - Patrocinador de la Guía de Nueva York"
-            >Heymondo</a>. Gracias también a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+            >Heymondo</a>.
+          </p>
+          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
+            <br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
           </p>
         </div>
 
