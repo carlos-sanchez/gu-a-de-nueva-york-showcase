@@ -10,14 +10,14 @@ const SponsorsSection = () => {
             Mecenas y <span className="italic text-primary">Patrocinadores</span>
           </h2>
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            Esta guía se ha editado gracias al apoyo de 176 mecenas durante la campaña de crowdfunding y al patrocinio de
+            Esta guía se ha editado gracias al apoyo de 176 mecenas durante la campaña de crowdfunding y al patrocinio de 
             <a
               href="https://www.dailybot.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
               aria-label="DailyBot - Patrocinador de la Guía de Nueva York"
-            >Dailybot</a> y 
+            >Dailybot</a> y
             <a
               href="https://heymondo.es/?utm_medium=Afiliado&utm_source=CHOCOTUITS&utm_campaign=PRINCIPAL&cod_descuento=CHOCOTUITS"
               target="_blank"
@@ -59,9 +59,9 @@ const SponsorsSection = () => {
           </a>
         </div>
 
-        <div className="text-center mb-16" style="margin-top: 80px;">
+        <div className="text-center mb-16">
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+            <br /><br /><br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
           </p>
         </div>
 
