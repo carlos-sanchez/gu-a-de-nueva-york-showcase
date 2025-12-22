@@ -29,9 +29,9 @@ const authors = [
 
 const AuthorsSection = () => {
   return (
-    <section id="autores" className="py-20 md:py-32 bg-background">
+    <section id="autores" className="py-20 md:py-32 bg-background" aria-labelledby="authors-heading">
       <div className="container">
-        <h2 className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
+        <h2 id="authors-heading" className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
           Conoce a los <span className="italic text-primary">autores</span>
         </h2>
         <p className="text-center text-muted-foreground font-body mb-16 max-w-2xl mx-auto">
@@ -40,18 +40,19 @@ const AuthorsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 max-w-5xl mx-auto">
           {authors.map((author, index) => (
-            <div
+            <article
               key={index}
               className="flex flex-col items-center text-center md:text-left md:flex-row md:items-start gap-6"
             >
-              <div className="relative flex-shrink-0">
-                <div className="absolute -inset-2 gradient-sage opacity-30 rounded-full blur-xl" />
+              <figure className="relative flex-shrink-0">
+                <div className="absolute -inset-2 gradient-sage opacity-30 rounded-full blur-xl" aria-hidden="true" />
                 <img
                   src={author.image}
-                  alt={`Foto de ${author.name}`}
+                  alt={`Foto de ${author.name}, ${author.role} de la Guía de Nueva York`}
                   className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
+                  loading="lazy"
                 />
-              </div>
+              </figure>
               <div className="space-y-3">
                 <div>
                   <h3 className="font-display text-2xl text-foreground">{author.name}</h3>
@@ -67,22 +68,22 @@ const AuthorsSection = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={`${author.name} en X`}
+                    aria-label={`Perfil de ${author.name} en X (antes Twitter)`}
                   >
-                    <XIcon className="w-5 h-5" />
+                    <XIcon className="w-5 h-5" aria-hidden="true" />
                   </a>
                   <a 
                     href={author.instagramUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={`${author.name} en Instagram`}
+                    aria-label={`Perfil de ${author.name} en Instagram`}
                   >
-                    <Instagram className="w-5 h-5" />
+                    <Instagram className="w-5 h-5" aria-hidden="true" />
                   </a>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
