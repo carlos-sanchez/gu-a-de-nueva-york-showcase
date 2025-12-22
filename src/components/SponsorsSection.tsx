@@ -63,7 +63,7 @@ const SponsorsSection = () => {
 
         <div className="text-center mb-16" style="margin-top: 80px">
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            Gracias también a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+            Nuestro agradecimiento a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
           </p>
         </div>
 
