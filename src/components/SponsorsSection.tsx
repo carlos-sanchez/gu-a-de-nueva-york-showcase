@@ -17,19 +17,14 @@ const SponsorsSection = () => {
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
               aria-label="DailyBot - Patrocinador de la Guía de Nueva York"
-            >
-            Dailybot</a> y
+            >Dailybot</a> y
             <a
               href="https://heymondo.es/?utm_medium=Afiliado&utm_source=CHOCOTUITS&utm_campaign=PRINCIPAL&cod_descuento=CHOCOTUITS"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
               aria-label="Heymondo - Patrocinador de la Guía de Nueva York"
-            >
-            Heymondo</a>.
-          </p>
-          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+            >Heymondo</a>. Gracias también a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
           </p>
         </div>
 
@@ -63,11 +58,6 @@ const SponsorsSection = () => {
             />
           </a>
         </div>
-
-        <div className="text-center mb-16">
-          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-
-
       </div>
     </section>
   );
