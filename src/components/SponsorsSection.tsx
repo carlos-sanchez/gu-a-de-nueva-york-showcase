@@ -28,6 +28,9 @@ const SponsorsSection = () => {
             >
             Heymondo</a>.
           </p>
+          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
+            Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12 md:gap-16" role="list" aria-label="Patrocinadores">
@@ -61,11 +64,8 @@ const SponsorsSection = () => {
           </a>
         </div>
 
-        <div className="text-center mb-16" style="margin-top: 80px">
+        <div className="text-center mb-16">
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
-          </p>
-        </div>
 
 
       </div>
