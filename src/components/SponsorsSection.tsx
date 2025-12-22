@@ -59,7 +59,7 @@ const SponsorsSection = () => {
 
         <div className="text-center mb-16">
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            <br /><br /><br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+            <br /><br /><br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que han puesto a este libro durante el proceso de edición.
           </p>
         </div>
 
