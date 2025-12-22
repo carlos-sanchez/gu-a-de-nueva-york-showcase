@@ -7,7 +7,7 @@ const SponsorsSection = () => {
       <div className="container">
         <div className="text-center mb-16">
           <h2 id="sponsors-heading" className="font-display text-4xl md:text-5xl text-center mb-4 text-foreground">
-            Mecenas y <span className="italic text-primary">Patrocinadores</span>
+            Agradecimientos</span>
           </h2>
           <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
             Esta guía se ha editado gracias al apoyo de 176 mecenas y durante la campaña de crowdfunding y al patrocinio de
@@ -25,9 +25,6 @@ const SponsorsSection = () => {
               className="transition-opacity hover:opacity-80"
               aria-label="Heymondo - Patrocinador de la Guía de Nueva York"
             >Heymondo</a>.
-          </p>
-          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
-            <br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
           </p>
         </div>
 
@@ -61,6 +58,13 @@ const SponsorsSection = () => {
             />
           </a>
         </div>
+
+        <div className="text-center mb-16">
+          <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto">
+            <br /><br /><br /><br />Gracias a Roberto y Miguel del equipo original de Libros.com por todo el amor que pusieron a este libro durante el proceso de edición.
+          </p>
+        </div>
+
       </div>
     </section>
   );
