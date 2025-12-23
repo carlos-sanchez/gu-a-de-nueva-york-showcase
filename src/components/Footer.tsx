@@ -27,11 +27,19 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-8 relative">
+        {/* Flame glow effect */}
+        <div 
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 animate-flame-glow rounded-full"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(255, 180, 50, 0.8) 0%, rgba(255, 120, 30, 0.5) 40%, transparent 70%)'
+          }}
+          aria-hidden="true"
+        />
         <img 
           src={statueOfLibertyTorch} 
           alt="Antorcha de la Estatua de la Libertad" 
-          className="w-auto max-w-[8rem] block"
+          className="w-auto max-w-[8rem] block relative z-10"
           aria-hidden="true"
         />
       </div>
