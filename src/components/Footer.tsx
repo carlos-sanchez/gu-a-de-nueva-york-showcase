@@ -35,7 +35,7 @@ const Footer = () => {
             style={{
               left: '-10%',
               top: 0,
-              background: 'radial-gradient(ellipse at center, rgba(255, 180, 50, 0.8) 0%, rgba(255, 120, 30, 0.5) 40%, transparent 70%)'
+              background: 'radial-gradient(ellipse at center, rgba(255, 180, 50, 0.8) 0%, rgba(255, 120, 30, 0.5) 40%, transparent 90%)'
             }}
             aria-hidden="true"
           />
