@@ -3,16 +3,24 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, BookOpen } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="relative flex items-center justify-center overflow-hidden gradient-sage">
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-20 py-4" aria-label="Navegación principal">
         <div className="container">
           <ul className="flex justify-center gap-6 md:gap-8 font-body text-sm text-primary-foreground/80">
-            <li><a href="#sobre-el-libro" className="hover:text-primary-foreground transition-colors">Sobre el libro</a></li>
-            <li><a href="#muestra" className="hover:text-primary-foreground transition-colors">Muestra</a></li>
-            <li><a href="#autores" className="hover:text-primary-foreground transition-colors">Autores</a></li>
-            <li><a href="#comprar" className="hover:text-primary-foreground transition-colors">Comprar</a></li>
+            <li><a href="#sobre-el-libro" onClick={(e) => scrollToSection(e, 'sobre-el-libro')} className="hover:text-primary-foreground transition-colors cursor-pointer">Sobre el libro</a></li>
+            <li><a href="#muestra" onClick={(e) => scrollToSection(e, 'muestra')} className="hover:text-primary-foreground transition-colors cursor-pointer">Muestra</a></li>
+            <li><a href="#autores" onClick={(e) => scrollToSection(e, 'autores')} className="hover:text-primary-foreground transition-colors cursor-pointer">Autores</a></li>
+            <li><a href="#comprar" onClick={(e) => scrollToSection(e, 'comprar')} className="hover:text-primary-foreground transition-colors cursor-pointer">Comprar</a></li>
           </ul>
         </div>
       </nav>
