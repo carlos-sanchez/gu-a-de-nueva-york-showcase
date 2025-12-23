@@ -30,8 +30,9 @@ const Footer = () => {
       <div className="flex justify-center mt-8 relative">
         {/* Flame glow effect */}
         <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 animate-flame-glow rounded-full"
+          className="absolute top-0 -translate-x-1/2 w-32 h-32 animate-flame-glow rounded-full"
           style={{
+            left: '44%',
             background: 'radial-gradient(ellipse at center, rgba(255, 180, 50, 0.8) 0%, rgba(255, 120, 30, 0.5) 40%, transparent 70%)'
           }}
           aria-hidden="true"
