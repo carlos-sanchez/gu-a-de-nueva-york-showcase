@@ -31,7 +31,7 @@ const Footer = () => {
         <img 
           src={statueOfLibertyTorch} 
           alt="Antorcha de la Estatua de la Libertad" 
-          className="w-auto max-w-xs md:max-w-sm lg:max-w-md block"
+          className="w-auto max-w-[8rem] block"
           aria-hidden="true"
         />
       </div>
